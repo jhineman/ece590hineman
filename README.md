@@ -1,10 +1,13 @@
 # ECE 590: Reinforcement Learning at Scale
 
 **Letcture Time, Place:** MW 8:30-9:45, 216 HH
+
 **Recitation Time, Place:** Consult dukehub ((TODO: Find this information)) 
+
 **Office hour:** W 10-11, CIEMAS 3431
 
 **Instructor:** Jay Hineman, Ph.D. (first name dot last name at institution)
+
 **TA:** Zeyu Chen (first name dot last name at institution)
 
 **Short Description:** This course consist of three parts. The first part will
@@ -48,7 +51,7 @@ and the StarCraft Multi-Agent Challenge.
 | Taxonomy of approaches           | Define basic solution methods                                   |                2 |               |
 | Review of Neural Networks        | Review use of NN in RL                                          |                3 |               |
 | Genral policy Optimization       | Mathematical details on gradient policy optimization techniques |             3, 4 |               |
-| Practical policy Optimaization   | Explore practical algorithms and variation in spinning up       |             5, 6 | HW 2          |
+| Practical policy Optimaization   | Explore practical algorithms and variations in spinning up      |             5, 6 | HW 2          |
 | *End of January*                 |                                                                 |                  |               |
 | Group presentations              | Groups present from papers                                      |  7 or recitation |               |
 | Ray, Rllib                       | Production tools for RL at scale                                |                8 |               |
