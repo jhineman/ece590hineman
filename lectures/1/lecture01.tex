@@ -1,10 +1,16 @@
 \documentclass{beamer}
- 
-\usepackage[utf8]{inputenc}
+
+
 \usepackage{hyperref}
+\hypersetup{
+  colorlinks = true
+}
+\usepackage[utf8]{inputenc}
+
+% beamer
+\setbeamertemplate{navigation symbols}{}
  
- 
-%Information to be included in the title page:
+% Information to be included in the title page:
 \title{ECE 590D-001, Reinforcement Learning at Scale}
 \author{Jay Hineman, Ph.D.}
 \institute{Geometric Data Analytics}
@@ -137,6 +143,9 @@ Challenge.
   \item Starting place: containerize requirements and code for Spinning Up (this will be
     written formally as a homework assignment).
   \item {\bf <<demo!! }
+    \begin{itemize}
+      \url{https://hub.docker.com/r/continuumio/anaconda/}
+    \end{itemize}
   \end{itemize}
 \end{frame}
 \end{document}
