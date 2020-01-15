@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true
+}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+
+
+\title{Homework 1---ECE590--001}
+\date{1/15/2020}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item
+  Install Docker on your local machine. Docker is available for Windows, Mac,
+and Linux. You have succeeded when the following works.
+\item
+  Run your first Docker commands:
+  \begin{enumerate}
+  \item 
+    \begin{lstlisting}[language=bash]
+      docker pull continuumio/anaconda3 # pull the docker image from the container registry
+      docker run -i -t continuumio/anaconda3 /bin/bash # run the image interactively
+      # you will not have a root prompt within an anaconda3 containers
+      exit # exits the terminal session (/bin/bash) and closes terminates the container
+    \end{lstlisting}
+  \item Read more \url{https://hub.docker.com/r/continuumio/anaconda3}. {\em try the last command
+      to get an interactive jupyter notebook bridged from docker to your local machine}
+  \end{enumerate}
+\item
+  Install \href{https://github.com/openai/spinningup}{spinningup} and its
+dependencies by docker container and issuing commands. It is installed
+correctly when you can run the algorithms provided.
+\begin{enumerate}
+\item Start by experimenting:
+  \begin{lstlisting}[language=bash]
+    docker run -i -t continuumio/anaconda3 /bin/bash
+    git clone https://github.com/openai/spinningup # !!! these changes are not persistent
+    pip install spinningup # use pip on local copy to install spinning up
+  \end{lstlisting}
+\item The dependencies will not be met by the {\tt pip} command above. But you can pip these
+  requirements into the base anaconda environment. The requirements can be found:
+  \url{https://github.com/openai/spinningup/blob/master/setup.py} and the command would be something
+  like
+  \begin{lstlisting}[language=bash]
+    pip install ``req1'' ... ``reqN''
+  \end{lstlisting}
+\item The last pip command will not succeed (i.e. run to completion without errors). Read these errors and try to fix them.
+  {\em The errors are due the fact that you have minimal development environment within the Docker container, you need to install more software and libraries,
+    in particular, you likely need c/c++ compilers to support certain requirements that were within setup.py}. Figure out
+  what these are and write them down. Additionally, how did you install them? {\em Hint: {\tt apt install} is the package management system in Debian and can install
+    most things.}
+  \begin{lstlisting}[language=bash]
+    apt install emacs # installs emacs text editor
+    apt install g++ gcc # installs gnu c++ and c compilers
+  \end{lstlisting}
+\item Run something from Spinning Up:
+  \begin{lstlisting}[language=bash]
+    python spinup/examples/bench_ppo_cartpole.py
+  \end{lstlisting}
+\end{enumerate}
+\item
+  From github (you will need to establish a github account), Fork {\tt
+spring2019ECE590hineman} to a copy of the repository in your own name space.
+Clone a copy of the repo from your name space (you can version control your work
+this way).
+\item
+  So far we have executed docker from an image and editted it, we would now like
+to build an image locally from a dockerfile that includes all the dependencies
+we have for spinning up in persistent and repeatable way. There is already a
+directory in {\tt spring2019ECE590hineman/homework/1/solutions} that contains a
+skeleton dockerfile. Edit this file to install spinning up and its dependencies.
+Show that you've succeed by screening shotting
+\begin{lstlisting}[language=bash]
+  python spinup/examples/bench_ppo_cartpole.py
+\end{lstlisting}
+You'll use what you learned from the last exercise to complete this.
+\end{enumerate}
+\end{document}
