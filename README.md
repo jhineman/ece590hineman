@@ -1,6 +1,6 @@
 # ECE 590: Reinforcement Learning at Scale
 
-**Letcture Time, Place:** MW 8:30-9:45, 216 HH
+**Letcture Time, Place:** MW 8:30-9:45, 208 HH
 
 **Recitation Time, Place:** Consult dukehub ((TODO: Find this information)) 
 
