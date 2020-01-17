@@ -1,7 +1,7 @@
 FROM continuumio/anaconda3
 
 # example call of docker RUN command see more at: https://docs.docker.com/engine/reference/builder/
-RUN apt-get update --fix-missing && apt-get install -y g++ gcc
+RUN apt-get update --fix-missing && apt-get install -y g++ gcc htop
 
 # need do the following
 # clone spinning up
