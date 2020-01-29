@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true
+}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+
+
+\title{Homework 2---ECE590--001---{\bf Due: 12 Feb 2020}}
+\date{2/29/2020}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Implement gridworld using OpenAI gym specification. You will implement a sub-class of {\tt Env} called {\tt gridworld}.
+  \begin{enumerate}
+  \item Your class should allow for arbitrary rectangular grids be able to specify arbitrary reward per user specification. You will also need a way to pass a done condition.
+  \item Your class should be initialized as follows:
+    \begin{lstlisting}[language=python]
+      my_grid = gridworld(reward=my_reward) # where my_reward is a numpy.array of shape (n,m)
+    \end{lstlisting}
+  \item Your class needs to meet the specifications set down in docstring for {\tt Env}: \url{https://github.com/openai/gym/blob/master/gym/core.py}. Implement the API methods; all except
+    render are required for this assignment. There will be a bonus for render.
+  \item Check that your class is working and meets specification by running the {\tt gym} {\em random agent}: \url{https://github.com/openai/gym/blob/master/examples/agents/random_agent.py}.
+  \item Demonstrate class can encode the gridworld Example 3.5 on page 60 of \href{http://incompleteideas.net/book/RLbook2018.pdf}{Sutton and Barto}.
+  \end{enumerate}
+\item Write a function that takes an instance of your {\tt gridworld} class and returns the state-value function like demonstrated in Example 3.5 on page 60 of
+  \href{http://incompleteideas.net/book/RLbook2018.pdf}{Sutton and Barto}.
+\item Train a policy for the Example 3.5 gridworld using the Vanilla Policy Gradient (VPG) code provided in spinning up \url{https://spinningup.openai.com/en/latest/algorithms/vpg.html}.
+  \begin{enumerate}
+  \item Set a trajectory length so that 20 states are visited in each
+    trajectory. The OpenAI gym framework this is essentially when you require {\tt step} to return the {\tt done} flag.
+  \item Read and execute the Vanilla policy gradient code on your {\tt gridworld} environment: \url{https://spinningup.openai.com/en/latest/algorithms/vpg.html}. Note
+    that this code despite being called {\em vanilla} already includes {\em Generalized Advantage Estimation}. The more basic code is here \url{https://github.com/openai/spinningup/blob/master/spinup/examples/pg_math/1_simple_pg.py}
+  \item Supply a training artifact (a plot of either timesteps vs. total reward, trajectories sampled vs. total reward) showing that VPG converges to some score. In words, write down an explanation
+    for this score in terms of the trajectory length and reward specified in Example 3.5.
+  \item The VPG code estimates the state-value function. Plot these values (seaborn should do this nicely).
+  \end{enumerate}
+\end{enumerate}
+\end{document}
