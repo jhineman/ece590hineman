@@ -2,7 +2,7 @@
 
 **Letcture Time, Place:** MW 8:30-9:45, 208 HH
 
-**Recitation Time, Place:** Consult dukehub ((TODO: Find this information)) 
+**Recitation Time, Place:** TEER 106 10:05-11:20
 
 **Office hour:** W 10-11, CIEMAS 3431
 
