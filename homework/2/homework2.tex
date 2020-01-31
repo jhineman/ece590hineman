@@ -26,7 +26,12 @@
   \item Check that your class is working and meets specification by running the {\tt gym} {\em random agent}: \url{https://github.com/openai/gym/blob/master/examples/agents/random_agent.py}.
   \item Demonstrate class can encode the gridworld Example 3.5 on page 60 of \href{http://incompleteideas.net/book/RLbook2018.pdf}{Sutton and Barto}.
   \end{enumerate}
-\item Write a function that takes an instance of your {\tt gridworld} class and returns the state-value function like demonstrated in Example 3.5 on page 60 of
+\item Write a function that takes an instance of your {\tt gridworld} class and returns the stascrete time steps. The specification of their
+interface defines a particular task: the actions are the choices made by the agent; the
+states are the basis for making the choices; and the rewards are the basis for evaluating
+the choices. Everything inside the agent is completely known and controllable by the
+agent; everything outside is incompletely controllable but may or may not be completely
+known. A policy is a stochastic rulete-value function like demonstrated in Example 3.5 on page 60 of
   \href{http://incompleteideas.net/book/RLbook2018.pdf}{Sutton and Barto}.
 \item Train a policy for the Example 3.5 gridworld using the Vanilla Policy Gradient (VPG) code provided in spinning up \url{https://spinningup.openai.com/en/latest/algorithms/vpg.html}.
   \begin{enumerate}
