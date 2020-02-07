@@ -19,3 +19,11 @@
 
 ## 22 January 2020
 * Introduction to policy gradients
+
+## 27 January 2020
+* Further policy gradients and related
+
+## 29 January 2020
+* Homework 2 posted/discussed
+* Project 1 posted/discussed
+* Discussed practical implementation of environments in gym
