@@ -1,0 +1,25 @@
+FROM continuumio/anaconda3
+
+# example call of docker RUN command see more at: https://docs.docker.com/engine/reference/builder/
+RUN apt-get update --fix-missing && apt-get install -y g++ gcc htop
+RUN apt-get install -y libopenmpi-dev
+
+# need do the following
+# clone spinning up
+RUN cd /opt && git clone https://github.com/openai/spinningup.git
+
+# install dependencies for spinning up
+RUN pip install cloudpickle==1.2.1
+RUN pip install gym[atari,box2d,classic_control]>=0.10.8
+RUN pip install joblib
+RUN pip install matplotlib
+RUN pip install mpi4py
+RUN pip install pytest
+RUN pip install psutil
+RUN pip install scipy
+RUN pip install seaborn
+RUN pip install tensorflow==1.15
+RUN pip install tqdm
+
+# install spinning up using pip
+RUN cd /opt/spinningup && pip install --user -e .
