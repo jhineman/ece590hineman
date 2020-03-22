@@ -1,5 +1,7 @@
 # ECE 590: Reinforcement Learning at Scale
 
+# [Covid Updates Here](covid.md)
+
 **Letcture Time, Place:** MW 8:30-9:45, 208 HH
 
 **Recitation Time, Place:** TEER 106 10:05-11:20
@@ -38,9 +40,9 @@ and the StarCraft Multi-Agent Challenge.
   * Chainer RL
   
 **Internal resources**
-  * [Lecture notes]()
+  * [Lecture notes](notes/)
   * [Bibliography]()
-  * [Homework]()
+  * [Homework](homework/)
   * [Computing details]()
 
 ### Proposed Content (in an ideal world)
